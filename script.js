@@ -1131,19 +1131,19 @@ function setupVideoCarousel() {
     }
 
     // เล่นวิดีโอปัจจุบันโดยอัตโนมัติ
-    const currentVideoEl = videoItems[currentVideo].querySelector("video");
-    if (currentVideoEl) {
-      currentVideoEl.currentTime = 0;
-      const playPromise = currentVideoEl.play();
+    // const currentVideoEl = videoItems[currentVideo].querySelector("video");
+    // if (currentVideoEl) {
+    //   currentVideoEl.currentTime = 0;
+    //   const playPromise = currentVideoEl.play();
 
-      if (playPromise !== undefined) {
-        playPromise.catch((e) => {
-          console.log("Auto-play prevented:", e);
-          // เพิ่มปุ่มเล่นวิดีโอถ้าไม่สามารถเล่นอัตโนมัติได้
-          addPlayButton(currentVideoEl);
-        });
-      }
-    }
+    //   if (playPromise !== undefined) {
+    //     playPromise.catch((e) => {
+    //       console.log("Auto-play prevented:", e);
+    //       // เพิ่มปุ่มเล่นวิดีโอถ้าไม่สามารถเล่นอัตโนมัติได้
+    //       addPlayButton(currentVideoEl);
+    //     });
+    //   }
+    // }
   }
 
   // เพิ่มปุ่มเล่นวิดีโอสำหรับอุปกรณ์มือถือที่ไม่สามารถเล่นอัตโนมัติได้
