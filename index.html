@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday!</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Dots -->
+    <div class="navigation">
+      <div class="nav-dot active" data-section="1"></div>
+      <div class="nav-dot" data-section="2"></div>
+      <div class="nav-dot" data-section="3"></div>
+      <div class="nav-dot" data-section="4"></div>
+      <div class="nav-dot" data-section="5"></div>
+    </div>
+
+    <!-- Section 1: Hero/Intro -->
+    <section class="section-1" id="section1">
+      <div class="parallax-bg"></div>
+      <div class="section-content text-center text-white">
+        <h1 class="text-6xl mb-4">Happy Birthday!</h1>
+        <p class="text-xl mb-6">
+          Wishing you a day filled with happiness and a year filled with joy.
+        </p>
+        <div class="birthday-cake">
+          <div class="cake-base"></div>
+          <div class="cake-middle"></div>
+          <div class="cake-top"></div>
+          <div class="candle"></div>
+          <div class="flame" id="flame"></div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div>Scroll down for more</div>
+        <div class="arrow-down">↓</div>
+      </div>
+    </section>
+
+    <!-- Section 2: Gallery -->
+    <section class="section-2" id="section2">
+      <div class="parallax-bg"></div>
+      <div class="section-content">
+        <h2 class="text-purple-800">Memory Gallery</h2>
+        <div class="gallery-container">
+          <div class="gallery-item">
+            <img
+              src="images/dance.jpg"
+              alt="Dance Performance"
+              onclick="openModal(this.src)"
+            />
+            <div class="caption">Dance Performance</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/piano.jpg"
+              alt="Playing Piano"
+              onclick="openModal(this.src)"
+            />
+            <div class="caption">Playing Piano</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/last-birthday.jpg"
+              alt="Last Year's Birthday"
+              onclick="openModal(this.src)"
+            />
+            <div class="caption">Last Year's Birthday</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Video -->
+    <section class="section-3" id="section3">
+      <div class="parallax-bg"></div>
+      <div class="section-content">
+        <h2 class="text-white">Special Video</h2>
+        <div class="video-carousel-container">
+          <div class="video-carousel">
+            <div class="video-item active">
+              <video src="videos/dance.mp4" controls></video>
+              <div class="video-caption">Dance Performance</div>
+            </div>
+            <div class="video-item">
+              <video src="videos/piano.mp4" controls></video>
+              <div class="video-caption">Piano Recital</div>
+            </div>
+            <div class="video-item">
+              <video src="videos/special-moment.mp4" controls></video>
+              <div class="video-caption">Special Moments</div>
+            </div>
+            <div class="video-item">
+              <video src="videos/smile.mp4" controls></video>
+              <div class="video-caption">Smiles of Happiness</div>
+            </div>
+          </div>
+          <div class="video-progress-container">
+            <div class="video-progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Photo Gallery Slider -->
+    <section class="section-4" id="section4">
+      <div class="parallax-bg"></div>
+      <div class="section-content">
+        <h2 class="text-purple-800">Memory Album</h2>
+        <div class="multi-row-gallery">
+          <!-- Row 1: Slides from left to right -->
+          <div class="gallery-row row-1">
+            <div class="gallery-item">
+              <img
+                src="images/memory1.jpg"
+                alt="Memory 1"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory2.jpg"
+                alt="Memory 2"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory3.jpg"
+                alt="Memory 3"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory4.jpg"
+                alt="Memory 4"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory5.jpg"
+                alt="Memory 5"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory6.jpg"
+                alt="Memory 6"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Row 2: Slides from right to left -->
+          <div class="gallery-row row-2">
+            <div class="gallery-item">
+              <img
+                src="images/memory7.jpg"
+                alt="Memory 7"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory8.jpg"
+                alt="Memory 8"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory9.jpg"
+                alt="Memory 9"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory10.jpg"
+                alt="Memory 10"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory11.jpg"
+                alt="Memory 11"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory12.jpg"
+                alt="Memory 12"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+          </div>
+
+          <!-- Row 3: Slides from left to right slowly -->
+          <div class="gallery-row row-3">
+            <div class="gallery-item">
+              <img
+                src="images/memory13.jpg"
+                alt="Memory 13"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory14.jpg"
+                alt="Memory 14"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory15.jpg"
+                alt="Memory 15"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory16.jpg"
+                alt="Memory 16"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory17.jpg"
+                alt="Memory 17"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+            <div class="gallery-item">
+              <img
+                src="images/memory18.jpg"
+                alt="Memory 18"
+                onclick="openModal(this.src)"
+              />
+              <div class="img-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Greeting Card -->
+    <section class="section-5" id="section5">
+      <div class="parallax-bg"></div>
+      <div class="section-content">
+        <h2 class="text-white">Birthday Card</h2>
+        <div class="greeting-card">
+          <h3 class="text-2xl font-bold text-purple-700 mb-6">
+            Happy Birthday!
+          </h3>
+          <div class="greeting-message">
+            <p class="mb-4">May all your dreams come true.</p>
+            <p class="mb-4">
+              May your dance and music always bring you happiness.
+            </p>
+            <p class="mb-4">
+              There are many more stages waiting for you to showcase your
+              talents.
+            </p>
+            <p class="mb-6">With love and care,</p>
+            <p class="font-bold text-purple-700">
+              From everyone who loves you ❤️
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Images -->
+    <div id="modal">
+      <span id="close-modal">&times;</span>
+      <img id="modal-content" src="" alt="Enlarged Image" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
